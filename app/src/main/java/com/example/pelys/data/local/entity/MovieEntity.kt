@@ -1,0 +1,17 @@
+package com.example.pelys.data.local.entity
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "movies")
+data class MovieEntity(
+    @PrimaryKey val id: Int,
+    val title: String,
+    val posterPath: String?,
+    val backdropPath: String?,
+    val voteAverage: Double,
+    val releaseDate: String?,
+    val overview: String,
+    val isFavorite: Boolean = false,
+    val page: Int // útil para poder borrar/reordenar por página si hace falta
+)
